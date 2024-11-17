@@ -1,0 +1,17 @@
+@use './../utils/mixins' as *;
+
+// .hidden-in-desktop {
+//   display: none;
+
+//   @include onDesktop {
+//     display: block;
+//   }
+// }
+
+// .hidden-in-mobile {
+//   display: block;
+
+//   @include onMobile {
+//     display: none;
+//   }
+// }

@@ -1,0 +1,22 @@
+.marquee {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.marquee__img {
+  margin-right: 100px;
+  transition: transform 0.3s ease;
+
+  @include onMobile {
+    margin-right: 0px;
+    width: 75%;
+  }
+}
+
+.marquee__img:hover {
+  transform: scale(1.05);
+}

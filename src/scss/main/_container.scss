@@ -1,0 +1,19 @@
+@use './../utils/mixins' as *;
+
+.container {
+  padding-inline: 64px;
+  max-width: calc(128px + 1472px);
+  margin: 0 auto;
+
+  @include onTablet {
+    padding-inline: 44px;
+  }
+
+  @include onMobile {
+    padding-inline: 24px;
+  }
+}
+
+// .container--header {
+
+// }

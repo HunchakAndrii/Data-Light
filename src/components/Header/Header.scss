@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+  position: relative;
+  z-index: 2;
+
+  @include onMobile {
+    padding-block: 15px;
+  }
+}

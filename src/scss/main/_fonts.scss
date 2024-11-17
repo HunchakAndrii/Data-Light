@@ -1,0 +1,6 @@
+@use './../utils/mixins' as *;
+
+@include font-face('PP-Neue-Machina', 'NeueMachina-Light', 300);
+@include font-face('PP-Neue-Machina', 'NeueMachina-Regular', 400);
+@include font-face('PP-Neue-Machina', 'NeueMachina-Ultrabold', 800);
+@include font-face('Nico-Moji', 'NicoMoji-Regular', 400);

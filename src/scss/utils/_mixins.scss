@@ -1,0 +1,82 @@
+@use './variables' as *;
+
+// #region breakpoints
+
+@mixin onDesktopLarge {
+  @media (max-width: $desktop-large-max-width) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (max-width: $desktop-max-width) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+@mixin onTabletSmall {
+  @media (max-width: $tablet-small-max-width) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+// #endregion
+
+
+@mixin pageGrid {
+  --column: 2;
+
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--column), 1fr);
+
+  @include onTablet {
+    --column: 6;
+    column-gap: 30px;
+  }
+
+  @include onDesktop {
+    --column: 12;
+    column-gap: 30px;
+  }
+}
+
+@mixin absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  @content;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin font-face($font-family, $font-name, $weight: 400, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url('/fonts/#{$font-name}.eot');
+    src: url('/fonts/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/#{$font-name}.woff2') format('woff2'),
+      url('/fonts/#{$font-name}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
