@@ -15,6 +15,7 @@ a {
 
 img {
   max-width: 100%;
+  pointer-events: none; // ??
 }
 
 button {
@@ -25,4 +26,12 @@ button {
 
 p {
   font-family: inherit;
+}
+
+form,
+input,
+select,
+textarea {
+  // all: unset;
+  font: inherit;
 }

@@ -1,0 +1,62 @@
+.benefits {
+  margin-bottom: 180px;
+  position: relative;
+  z-index: 2;
+}
+
+.benefits__title {
+  margin-bottom: 120px;
+
+  @include onTablet {
+    margin-bottom: 50px;
+  }
+
+  @include onMobile {
+    font-size: 38px;
+  }
+}
+
+.benefits__blocks {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: repeat(2, minmax(100px, 242px));
+  gap: 15px 5px;
+  position: relative;
+
+  @include onDesktopLarge {
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 170px 242px 242px;
+  }
+
+  @include onTablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+
+  @media screen and (max-width: 680px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.benefits__btn {
+  padding-inline: 50px;
+  position: absolute;
+  bottom: 20px;
+
+  @include onDesktopLarge {
+    bottom: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 300px; // ??
+  }
+
+  @include onTablet {
+    bottom: -100px;
+    padding-inline: 40px;
+  }
+
+  @include onMobile {
+    padding-inline: 30px;
+  }
+}

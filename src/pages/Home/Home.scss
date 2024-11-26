@@ -1,0 +1,103 @@
+.home {
+  position: relative;
+  // overflow: hidden;
+}
+
+.blur {
+  position: absolute;
+  z-index: 0;
+}
+
+
+.blur-1 {
+  top: -92px;
+  right: 0;
+
+  @include onMobile {
+    height: 6%;
+    width: 90%;
+  }
+}
+
+.blur-2 {
+  top: 22%;
+  left: 0;
+
+  @include onDesktopLarge {
+    top: 26%;
+  }
+
+  @media screen and (max-width: 1350px) {
+    top: 27%;
+  }
+
+  @include onDesktop {
+    top: 25%;
+  }
+
+  @media screen and (max-width: 1130px) {
+    top: 27%;
+  }
+
+  @media screen and (max-width: 700px) {
+    top: 32%;
+  }
+
+  @media screen and (max-width: 500px) {
+    top: 34%;
+  }
+}
+
+.blur-3 {
+  top: 32%;
+  right: 0;
+
+  @media screen and (max-width: 1350px) {
+    top: 37%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    top: 34%;
+  }
+
+  @include onTablet {
+    top: 37%;
+  }
+
+  @include onTabletSmall {
+    top: 35%;
+  }
+
+  @media screen and (max-width: 700px) {
+    top: 40%;
+  }
+
+  @include onMobile {
+    top: 42%;
+  }
+
+  @media screen and (max-width: 450px) {
+    top: 43%;
+  }
+}
+
+.blur-4 {
+  right: 0;
+  top: 63%;
+
+  @include onDesktop {
+    top: 68%;
+  }
+
+  @media screen and (max-width: 1130px) {
+    top: 71%;
+  }
+
+  @include onTablet {
+    top: 74%;
+  }
+
+  @include onMobile {
+    top: 76%;
+  }
+}

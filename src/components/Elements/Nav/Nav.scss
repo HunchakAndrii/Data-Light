@@ -51,6 +51,17 @@
   }
 }
 
+.nav--footer {
+  height: 100%;
+}
+
+.nav--footer .nav__list {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  height: 100%;
+}
+
 .nav__list {
   display: flex;
   gap: 30px;

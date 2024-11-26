@@ -10,23 +10,22 @@ export const Marquee = () => {
     '/src/assets/marquee/marquee-5.svg',
   ];
 
-
   return (
       <FastMarquee 
-      className="marquee" 
-      speed={50} 
-      pauseOnHover={true}
-      gradient={true} 
-      gradientColor={'#172224'} 
-      gradientWidth={'15px'}>
-        {marqueeImages.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`marquee-img-${index}`}
-            className="marquee__img"
-          />
-        ))}
+        className="marquee" 
+        speed={80} 
+        pauseOnHover={true}
+        gradient={true} 
+        gradientColor={'#172224'} 
+        gradientWidth={'15px'}>
+          {marqueeImages.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`marquee-img-${index}`}
+              className="marquee__img"
+            />
+          ))}
       </FastMarquee>
   )
 }

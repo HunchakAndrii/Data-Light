@@ -37,7 +37,7 @@ export const FirstSection = () => {
         />
       </div>
 
-      <img className="blur-1" src="/src/assets/blur/blur-1.png" alt="blur" />
+      {/* <img className="blur-1" src="/src/assets/blur/blur-1.png" alt="blur" /> */}
     </section>
   )
 }

@@ -1,4 +1,6 @@
 .first-section {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -21,8 +23,6 @@
 }
 
 .first-section__content {
-  position: relative;
-  z-index: 1;
 
   @include onTablet {
     display: grid;
@@ -122,10 +122,6 @@
     justify-self: center;
   }
 
-  @include onTabletSmall {
-    justify-content: center;
-  }
-
   @media screen and (max-width: 680px) {
     padding-top: 0;
     grid-column: 1 / -1;
@@ -166,6 +162,7 @@
 
 .first-section__btn {
   padding-inline: 55.5px;
+  max-width: 345px;
 
   @include onTablet {
     grid-row: span 2;
@@ -247,6 +244,8 @@
 
   @include onMobile {
     width: 28px;
+    bottom: 10px;
+    right: -50px;
   }
 }
 
@@ -261,16 +260,5 @@
 
   100% {
     transform: translateY(0);
-  }
-}
-
-.blur-1 {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  right: 0;
-
-  @include onTablet {
-    height: 190%;
   }
 }

@@ -1,0 +1,406 @@
+.timeline {
+  padding-top: 268px;
+  padding-bottom: 345px;
+
+  @include onDesktop {
+    padding-top: 218px;
+    padding-bottom: 295px;
+  }
+
+  @include onTablet {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+
+  @media screen and (max-width: 520px) {
+    padding-top: 75px;
+    padding-bottom: 100px;
+  }
+}
+
+.timeline__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 218px;
+  max-width: 1350px;
+  margin: 0 auto;
+
+  @include onTablet {
+    height: 90vh;
+    flex-direction: column;
+  }
+
+  @include onTabletSmall {
+    align-items: flex-start;
+  }
+}
+
+.timeline__item {
+  position: absolute;
+  z-index: 2;
+  min-width: 94px;
+  min-height: 94px;
+  border-radius: 50%;
+  @include flex-center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+
+    &::after {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+
+  }
+
+  @media screen and (max-width: 440px) {
+    min-width: 84px;
+    min-height: 84px;
+  }
+
+  &::after {
+    content: '';
+    width: 1px;
+    height: 40px;
+    background-color: $light-grey;
+    position: absolute;
+
+    @media screen and (max-width: 1150px) {
+      height: 50px;
+    }
+
+    @include onTablet {
+      width: 35px;
+      height: 1px;
+    }
+  }
+
+  &:nth-child(1) {
+    top: 19%;
+    left: -0.3%;
+    background: #dbfb1c;
+
+    @media screen and (max-width: 1300px) {
+      top: 19%;
+      left: -0.4%;
+    }
+
+    &::after {
+      top: 107%;
+
+      @include onTablet {
+        top: 45%;
+        left: 107%;
+      }
+    }
+
+    .timeline__content {
+      bottom: -111px;
+
+      @include onTablet {
+        top: -10%;
+        left: 150%;
+        bottom: 0;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    left: 23.5%;
+    top: -3%;
+    background: #c0fc17;
+
+    @include onDesktopLarge {
+      top: 0;
+    }
+
+    @media screen and (max-width: 1300px) {
+      top: 2%;
+    }
+
+    @media screen and (max-width: 1150px) {
+      top: 5%;
+    }
+
+    @media screen and (max-width: 1050px) {
+      top: 8%;
+    }
+
+    &::after {
+      bottom: 107%;
+
+      @include onTablet {
+        top: 45%;
+        right: 107%;
+      }
+
+      @include onTabletSmall {
+        top: 45%;
+        left: 107%;
+      }
+    }
+
+    .timeline__content {
+      top: -120px;
+
+      @include onTablet {
+        flex-direction: row-reverse;
+        top: 12%;
+        left: -450%;
+        text-align: right;
+      }
+
+      @media screen and (max-width: 880px) {
+        top: -15%;
+        left: -350%;
+      }
+
+      @include onTabletSmall {
+        flex-direction: row;
+        top: 15%;
+        left: 150%;
+        text-align: left;
+      }
+
+      @media screen and (max-width: 520px) {
+        flex-direction: column;
+        align-items: flex-start;
+        top: -10%;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    left: 47%;
+    background: #9dfd10;
+
+    &::after {
+      top: 107%;
+
+      @include onTablet {
+        top: 45%;
+        left: 107%;
+      }
+    }
+
+    .timeline__content {
+      bottom: -111px;
+
+      @include onTablet {
+        top: -10%;
+        left: 150%;
+        bottom: 0;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    left: 70.5%;
+    top: 55%;
+    background: #7cfe0a;
+
+    @media screen and (max-width: 1300px) {
+      top: 51%;
+    }
+
+    @media screen and (max-width: 1150px) {
+      top: 48%;
+    }
+
+    @media screen and (max-width: 1050px) {
+      top: 46%;
+      left: 68%;
+    }
+
+    &::after {
+      bottom: 107%;
+
+      @include onTablet {
+        top: 45%;
+        right: 107%;
+      }
+
+      @include onTabletSmall {
+        top: 45%;
+        left: 107%;
+      }
+    }
+
+    .timeline__content {
+      top: -115px;
+
+      @include onTablet {
+        flex-direction: row-reverse;
+        top: 15%;
+        left: -450%;
+        text-align: right;
+      }
+
+      @media screen and (max-width: 880px) {
+        left: -350%;
+      }
+
+      @include onTabletSmall {
+        flex-direction: row;
+        top: 15%;
+        right: 0;
+        left: 150%;
+        text-align: left;
+      }
+
+      @media screen and (max-width: 520px) {
+        flex-direction: column;
+        align-items: flex-start;
+        top: -10%;
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    left: calc(100.2% - 94px);
+    top: 34%;
+    background: #5dfe04;
+
+    &::after {
+      top: 107%;
+
+      @include onTablet {
+        top: 45%;
+        left: 107%;
+      }
+    }
+
+    .timeline__content {
+      bottom: -111px;
+
+      @include onTablet {
+        top: -10%;
+        left: 150%;
+        bottom: 0;
+      }
+    }
+  }
+
+  @include onTablet {
+    &:nth-child(-n + 5) {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.timeline__content {
+  position: absolute;
+  left: -50px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: $white;
+  width: 400%;
+  pointer-events: none; // ??
+
+  @media screen and (max-width: 1150px) {
+    gap: 10px;
+  }
+
+  @include onTablet {
+    gap: 15px;
+  }
+
+  @media screen and (max-width: 880px) {
+    width: 300%;
+  }
+
+  @include onTabletSmall {
+    width: 400%;
+  }
+
+  @media screen and (max-width: 520px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
+}
+
+.timeline__step {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 67px;
+
+  @include onDesktop {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  @media screen and (max-width: 1150px) {
+    font-size: 44px;
+    line-height: 54px;
+  }
+
+  @include onTablet {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  @media screen and (max-width: 440px) {
+    font-size: 44px;
+    line-height: 54px;
+  }
+}
+
+.timeline__text {
+  font-size: 22px;
+  line-height: 30px;
+  flex-shrink: 0;
+
+  @include onDesktop {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @media screen and (max-width: 1150px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include onTablet {
+    font-size: 18px;
+    line-height: 26px;
+    flex-shrink: 1;
+  }
+
+  @media screen and (max-width: 440px) {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 200px;
+  }
+}
+
+.timeline__line {
+  position: absolute;
+
+  @include onTablet {
+    border-radius: 30px;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, #4aff00, #e3fb1e);
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include onTabletSmall {
+    left: 47px;
+  }
+
+  @media screen and (max-width: 440px) {
+    left: 42px;
+  }
+
+}
+

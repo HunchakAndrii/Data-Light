@@ -1,0 +1,93 @@
+.contacts {
+  margin-top: 170px;
+  position: relative;
+
+  @include onMobile {
+    margin-top: 100px;
+  }
+}
+
+.contacts__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media screen and (max-width: 1080px) {
+    grid-template-columns:  1fr;
+  }
+}
+
+.contacts__image {
+  height: 100%;
+  border-radius: 32px 0 0 32px;
+  background: linear-gradient(to left, #4aff00, #e3fb1e);
+  background-size: 200% 200%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 53%;
+
+  @media screen and (max-width: 1300px) {
+    overflow: hidden;
+    left: 70%;
+  }
+
+  @include onDesktop {
+    left: 70%;
+    height: 80%;
+    top: 48%;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (max-width: 1080px) {
+    display: none;
+  }
+}
+
+.contacts__img-girl {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media screen and (max-width: 1300px) {
+    top: 50%;
+    transform: translate(-15%, -50%) rotate(-50deg);
+  }
+
+}
+
+.contacts__star-80 {
+  position: absolute;
+  top: 50px;
+  right: 90px;
+
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
+}
+
+.contacts__position {
+  text-align: right;
+  position: absolute;
+  top: 140px;
+  left: 11%;
+
+  @include onDesktopLarge {
+    left: 3%;
+  }
+
+  @media screen and (max-width: 1300px) {
+    top: 100px;
+  }
+
+  @include onDesktop {
+    font-size: 18px;
+    top: 55px;
+    left: 10%;
+  }
+}

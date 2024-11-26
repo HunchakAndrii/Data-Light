@@ -3,14 +3,14 @@
 
   @include onTablet {
     display: block;
-    position: relative;
-    z-index: 3;
+    // position: relative;
+    // z-index: 3;
   }
 }
 
 .burger {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   display: block;
   width: 38px;
   cursor: pointer;
@@ -50,12 +50,13 @@
 
 .mobile-menu__content {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   background-color: #1c1d1b;
   // background-color: rgb(39, 54, 35);
   left: 16px;
   right: 16px;
   top: 16px;
+
   border-radius: 20px;
   border: 1px solid $white;
   padding: 30px 30px 45px 30px;
@@ -88,4 +89,14 @@
       transform: translate(13px,-9px) rotatez(45deg);
     }
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }

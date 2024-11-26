@@ -1,0 +1,109 @@
+.materials-card {
+  background-color: $black;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .materials-card__img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.materials-card__image {
+  display: flex;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.materials-card__img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.materials-card__content {
+  padding: 32px 25px 30px;
+  color: $white;
+  flex-grow: 1;
+  display: grid;
+  grid-template-rows: auto minmax(1px, 100px) 1fr 32px;
+
+  @include onTablet {
+    grid-template-rows: auto auto 1fr 32px;
+  }
+
+  @include onMobile {
+    padding: 20px 15px 20px;
+  }
+}
+
+.materials-card__date {
+  margin-bottom: 30px;
+
+  @include onDesktop {
+    margin-bottom: 15px;
+  }
+}
+
+.materials-card__title {
+  @include onDesktop {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include onTablet {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.materials-card__text {
+  margin: 10px 0 20px;
+
+  @include onDesktop {
+    margin: 15px 0 15px;
+  }
+}
+
+.materials-card__socials {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.materials-card__btn {
+  padding-block: 0;
+
+  @include onDesktopLarge {
+    gap: 15px;
+  }
+
+  @include onDesktop {
+    gap: 2px;
+
+    & p {
+      font-size: 15px;
+    }
+
+    & img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  @include onTablet {
+    gap: 15px;
+
+    & p {
+      font-size: 16px;
+    }
+
+    & img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

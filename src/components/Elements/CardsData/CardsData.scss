@@ -1,0 +1,57 @@
+.data {
+  color: $white;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  @include onDesktop {
+    gap: 10px;
+  }
+
+  @include onTablet {
+    gap: 15px;
+  }
+}
+
+.view img {
+  width: 28px;
+  height: 26px;
+}
+
+.view,
+.likes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @include onDesktop {
+    gap: 4px;
+
+    & p {
+      font-size: 15px;
+    }
+  }
+
+  @include onTablet {
+    gap: 10px;
+
+    & p {
+      font-size: 16px;
+    }
+  }
+}
+
+.likes button {
+  display: flex;
+}
+
+.heart-icon {
+  fill: $black;
+  stroke: white;
+  transition: fill 0.3s ease;
+}
+
+.heart-icon.liked {
+  fill: red;
+  stroke: red;
+}
