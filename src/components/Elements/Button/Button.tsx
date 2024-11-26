@@ -17,22 +17,22 @@ export const Button: React.FC<ButtonTypes> = ({ btnText, type, className }) => {
 
   return (
     // <div>
-      <button className={`btn btn--${type} ${className}`} onClick={handleClick}>
-        <p>{btnText}</p>
-        {type === 'secondary' || type === 'transparent' ? (
-          <img
-            src="/src/assets/icons/arrow-right-ligth.svg"
-            alt="btn-icon"
-            className="btn__icon"
-          />
-        ) : (
-          <img
-            src="/src/assets/icons/arrow-right-dark.svg"
-            alt="btn-icon"
-            className="btn__icon"
-          />
-        )}
-      </button>
+    <button className={`btn btn--${type} ${className}`} onClick={handleClick}>
+      <p>{btnText}</p>
+      {type === 'secondary' || type === 'transparent' ? (
+        <img
+          src="./../../../assets/icons/arrow-right-light.svg"
+          alt="btn-icon"
+          className="btn__icon"
+        />
+      ) : (
+        <img
+          src="./../../../assets/icons/arrow-right-light.svg"
+          alt="btn-icon"
+          className="btn__icon"
+        />
+      )}
+    </button>
     // {/* </div> */}
   )
 }
