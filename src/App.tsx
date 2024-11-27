@@ -4,12 +4,14 @@ import { Home } from './pages/Home/Home'
 import { Footer } from './components/Footer/Footer'
 import { ServicesPage } from './pages/ServicesPage/ServicesPage'
 import { CasesPage } from './pages/CasesPage/CasesPage'
-import './App.scss'
 import { MaterialsPage } from './pages/MaterialsPage/MaterialsPage'
+import { ScrollToTop } from './components/Service/ScrollToTop/ScrollToTop'
+import './App.scss'
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

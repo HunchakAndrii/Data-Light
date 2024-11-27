@@ -23,7 +23,6 @@
 }
 
 .first-section__content {
-
   @include onTablet {
     display: grid;
     grid-template-columns: 55% 45%;
@@ -261,4 +260,27 @@
   100% {
     transform: translateY(0);
   }
+}
+
+.block-1 {
+  width: 100%;
+  background-color: blue;
+  height: 300px;
+  @include flex-center;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  
+}
+
+.square.active {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  
 }

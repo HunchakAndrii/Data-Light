@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Nav } from '../Nav/Nav'
 import classNames from 'classnames'
+
 import './MobileMenu.scss'
 
 export const MobileMenu = () => {

@@ -2,8 +2,8 @@ import classNames from 'classnames'
 import './Nav.scss'
 
 interface NavProps {
-  type: 'mobile' | 'desktop' | 'footer';
-  onLinkClick?: () => void;
+  type: 'mobile' | 'desktop' | 'footer'
+  onLinkClick?: () => void
 }
 
 export const Nav = ({ type, onLinkClick }: NavProps) => {
