@@ -2,6 +2,7 @@ import { Form } from '../Elements/Form/Form'
 import './Contacts.scss'
 
 export const Contacts = () => {
+
   return (
     <section className="contacts" id="contacts">
       <div className="container">

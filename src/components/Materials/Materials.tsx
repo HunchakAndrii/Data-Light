@@ -2,8 +2,15 @@ import { Button } from '../Elements/Button/Button'
 import { materialsCardsData } from '../../data/materialsCardsData'
 import { MaterialsCard } from '../MaterialsCard/MaterialsCard'
 import './Materials.scss'
+import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export const Materials = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <section className="materials container ">
       <h2 className="materials__title">Полезные материалы</h2>
@@ -14,11 +21,13 @@ export const Materials = () => {
         ))}
       </div>
 
-      <Button
-        btnText="Читать все"
-        type="secondary"
-        className="btn materials__btn"
-      />
+      <Link to="/materials">
+        <Button
+          btnText="Читать все"
+          type="secondary"
+          className="btn materials__btn"
+        />
+      </Link>
     </section>
   )
 }

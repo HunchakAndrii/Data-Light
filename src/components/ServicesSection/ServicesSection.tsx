@@ -2,6 +2,7 @@ import { ServiceCard } from '../ServiceCard/ServiceCard'
 import './ServicesSection.scss'
 import { serviceCardsDate } from '../../data/serviceCardsData'
 import { Button } from '../Elements/Button/Button'
+import { Link } from 'react-router-dom'
 
 export const ServicesSection = () => {
   return (
@@ -16,11 +17,13 @@ export const ServicesSection = () => {
             <ServiceCard key={index} card={card} />
           ))}
         </div>
-        <Button
-          btnText="Все услуги"
-          type="secondary"
-          className="btn services__btn"
-        />
+        <Link to="/services">
+          <Button
+            btnText="Все услуги"
+            type="secondary"
+            className="btn services__btn"
+            />
+        </Link>
       </div>
     </section>
   )

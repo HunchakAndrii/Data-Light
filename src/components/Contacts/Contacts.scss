@@ -1,9 +1,9 @@
 .contacts {
-  margin-top: 170px;
+  padding-top: 170px;
   position: relative;
 
   @include onMobile {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 }
 
@@ -21,6 +21,8 @@
 }
 
 .contacts__image {
+  margin-top: 170px;
+  max-height: 670px;
   height: 100%;
   border-radius: 32px 0 0 32px;
   background: linear-gradient(to left, #4aff00, #e3fb1e);
@@ -38,8 +40,8 @@
 
   @include onDesktop {
     left: 70%;
-    height: 80%;
-    top: 48%;
+    height: 70%;
+    top: 38%;
     transform: translateY(-50%);
   }
 

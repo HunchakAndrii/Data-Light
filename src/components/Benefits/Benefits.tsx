@@ -14,11 +14,13 @@ export const Benefits = () => {
               <BenefitBlock key={index} block={block} />
             ))}
 
-            <Button
-              btnText="Оставить заявку"
-              type="primary"
-              className="benefits__btn"
-            />
+            <a href="#contacts">
+              <Button
+                btnText="Оставить заявку"
+                type="primary"
+                className="benefits__btn"
+              />
+            </a>
           </div>
         </div>
       </section>
