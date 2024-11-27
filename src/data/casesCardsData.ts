@@ -1,7 +1,7 @@
-import case1Img from '/src/assets/cases/cases-1.png';
-import case2Img from '/src/assets/cases/cases-2.png';
-import case3Img from '/src/assets/cases/cases-3.png';
-import case4Img from '/src/assets/cases/cases-4.png';
+import case1Img from '/images/cases/cases-1.png';
+import case2Img from '/images/cases/cases-2.png';
+import case3Img from '/images/cases/cases-3.png';
+import case4Img from '/images/cases/cases-4.png';
 
 export const casesCardsData = [
   {

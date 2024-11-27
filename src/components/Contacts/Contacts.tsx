@@ -15,12 +15,12 @@ export const Contacts = () => {
             </p>
             <img
               className="contacts__img-girl"
-              src="/src/assets/form/girls.png"
+              src="images/form/girls.png"
               alt="girl"
             />
             <img
               className="contacts__star-80"
-              src="/src/assets/form/star-80.svg"
+              src="/images/form/star-80.svg"
               alt="star"
             />
           </div>

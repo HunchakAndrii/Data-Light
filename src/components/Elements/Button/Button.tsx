@@ -20,13 +20,13 @@ export const Button: React.FC<ButtonTypes> = ({ btnText, type, className }) => {
       <p>{btnText}</p>
       {type === 'secondary' || type === 'transparent' ? (
         <img
-          src="/src/assets/icons/arrow-right-ligth.svg"
+          src="/images/icons/arrow-right-ligth.svg"
           alt="btn-icon"
           className="btn__icon"
         />
       ) : (
         <img
-          src="/src/assets/icons/arrow-right-dark.svg"
+          src="/images/icons/arrow-right-dark.svg"
           alt="btn-icon"
           className="btn__icon"
         />

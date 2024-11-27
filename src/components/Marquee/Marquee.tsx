@@ -3,11 +3,11 @@ import FastMarquee from 'react-fast-marquee'
 
 export const Marquee = () => {
   const marqueeImages = [
-    '/src/assets/marquee/marquee-1.svg',
-    '/src/assets/marquee/marquee-2.svg',
-    '/src/assets/marquee/marquee-3.svg',
-    '/src/assets/marquee/marquee-4.svg',
-    '/src/assets/marquee/marquee-5.svg',
+    '/images/marquee/marquee-1.svg',
+    '/images/marquee/marquee-2.svg',
+    '/images/marquee/marquee-3.svg',
+    '/images/marquee/marquee-4.svg',
+    '/images/marquee/marquee-5.svg',
   ];
 
   return (

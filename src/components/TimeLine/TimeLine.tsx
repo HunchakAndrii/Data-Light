@@ -8,7 +8,7 @@ export const TimeLine = () => {
           <div className="timeline__image">
             <img
               className="timeline__img"
-              src="/src/assets/timeline/timeline-1.svg"
+              src="/images/timeline/timeline-1.svg"
               alt=""
             />
           </div>
@@ -25,7 +25,7 @@ export const TimeLine = () => {
           <div className="timeline__image">
             <img
               className="timeline__img"
-              src="/src/assets/timeline/timeline-2.svg"
+              src="/images/timeline/timeline-2.svg"
               alt=""
             />
           </div>
@@ -42,7 +42,7 @@ export const TimeLine = () => {
           <div className="timeline__image">
             <img
               className="timeline__img"
-              src="/src/assets/timeline/timeline-3.svg"
+              src="/images/timeline/timeline-3.svg"
               alt=""
             />
           </div>
@@ -59,7 +59,7 @@ export const TimeLine = () => {
           <div className="timeline__image">
             <img
               className="timeline__img"
-              src="/src/assets/timeline/timeline-4.svg"
+              src="/images/timeline/timeline-4.svg"
               alt=""
             />
           </div>
@@ -76,7 +76,7 @@ export const TimeLine = () => {
           <div className="timeline__image">
             <img
               className="timeline__img"
-              src="/src/assets/timeline/timeline-5.svg"
+              src="/images/timeline/timeline-5.svg"
               alt=""
             />
           </div>
@@ -90,7 +90,7 @@ export const TimeLine = () => {
         </div>
 
         <div className="timeline__line">
-          <img src="/src/assets/timeline/Union.svg" alt="timeline__img" />
+          <img src="/images/timeline/Union.svg" alt="timeline__img" />
         </div>
       </div>
     </div>

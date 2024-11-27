@@ -28,7 +28,7 @@ export const CardsData: React.FC<CardsDataProps> = ({
   return (
     <div className="data">
       <div className="view">
-        <img src="/src/assets/icons/eye.svg" alt="view" />
+        <img src="/images/icons/eye.svg" alt="view" />
         <p>{views}</p>
       </div>
       <div className="likes">

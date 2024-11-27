@@ -19,10 +19,10 @@ export const Home = () => {
       <Cases />
       <Materials />
       <Contacts />
-      <img className="blur blur-1" src="/src/assets/blur/blur-1.png" alt="" />
-      <img className="blur blur-2" src="/src/assets/blur/blur-2.png" alt="" />
-      <img className="blur blur-3" src="/src/assets/blur/blur-3.png" alt="" />
-      <img className="blur blur-4" src="/src/assets/blur/blur-4.png" alt="" />
+      <img className="blur blur-1" src="/images/blur/blur-1.png" alt="" />
+      <img className="blur blur-2" src="/images/blur/blur-2.png" alt="" />
+      <img className="blur blur-3" src="/images/blur/blur-3.png" alt="" />
+      <img className="blur blur-4" src="/images/blur/blur-4.png" alt="" />
     </div>
   )
 }

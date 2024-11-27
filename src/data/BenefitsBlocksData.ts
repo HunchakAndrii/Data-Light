@@ -11,12 +11,12 @@ export const BenefitsBlocksData = [
   },
   {
     text: 'Штатные сотрудники ',
-    icon: '/src/assets/icons/benefits-1.svg',
+    icon: '/images/icons/benefits-1.svg',
     type: 'dark',
   },
   {
     text: 'Скорость и качество ',
-    icon: '/src/assets/icons/benefits-2.svg',
+    icon: '/images/icons/benefits-2.svg',
     type: 'dark',
   },
   {
@@ -26,17 +26,17 @@ export const BenefitsBlocksData = [
   },
   {
     text: 'Бесплатное пилотирования ',
-    icon: '/src/assets/icons/benefits-3.svg',
+    icon: '/images/icons/benefits-3.svg',
     type: 'dark',
   },
   {
     text: 'Экспертиза в разных индустриях ',
-    icon: '/src/assets/icons/benefits-4.svg',
+    icon: '/images/icons/benefits-4.svg',
     type: 'dark',
   },
   {
     text: 'Контроль качества на каждом проекте ',
-    icon: '/src/assets/icons/benefits-5.svg',
+    icon: '/images/icons/benefits-5.svg',
     type: 'dark',
   },
 ]

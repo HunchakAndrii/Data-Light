@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import { Button } from '../Elements/Button/Button'
 import { Tag } from '../Elements/Tag/Tag'
 import './FirstSection.scss'
@@ -33,17 +32,17 @@ export const FirstSection = () => {
       <div className="first-section__image">
         <img
           className="first-section__img"
-          src="/src/assets/first-sectoin/first-section.png"
+          src="/images/first-sectoin/first-section.png"
           alt=""
         />
         <img
           className="first-section__star-big"
-          src="/src/assets/icons/star-big.svg"
+          src="/images/icons/star-big.svg"
           alt="star"
         />
         <img
           className="first-section__star-small"
-          src="/src/assets/icons/star-small.svg"
+          src="/images/icons/star-small.svg"
           alt="star"
         />
       </div>
