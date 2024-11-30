@@ -5,6 +5,7 @@ import { Button } from '../Elements/Button/Button'
 import { Link } from 'react-router-dom'
 
 export const ServicesSection = () => {
+  
   return (
     <section className="services" id="services">
       <div className="container">
@@ -22,7 +23,7 @@ export const ServicesSection = () => {
             btnText="Все услуги"
             type="secondary"
             className="btn services__btn"
-            />
+          />
         </Link>
       </div>
     </section>

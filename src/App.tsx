@@ -6,9 +6,13 @@ import { ServicesPage } from './pages/ServicesPage/ServicesPage'
 import { CasesPage } from './pages/CasesPage/CasesPage'
 import { MaterialsPage } from './pages/MaterialsPage/MaterialsPage'
 import { ScrollToTop } from './components/Service/ScrollToTop/ScrollToTop'
+import { useAnimTitles } from './components/Animation/useAnimTitles'
 import './App.scss'
 
+
 function App() {
+  useAnimTitles()
+
   return (
     <Router>
       <ScrollToTop />
