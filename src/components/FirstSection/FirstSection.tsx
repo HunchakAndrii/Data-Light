@@ -1,31 +1,10 @@
-import { useLayoutEffect } from 'react'
+
 import { Button } from '../Elements/Button/Button'
 import { Tag } from '../Elements/Tag/Tag'
-import { ScrollTrigger } from 'gsap/all'
-import gsap from 'gsap'
+
 import './FirstSection.scss'
 
 export const FirstSection = () => {
-  gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.square',
-        start: 'top center',
-        end: 'bottom 20%',
-        // markers: true,
-        scrub: true,
-        toggleClass: 'active',
-      },
-    })
-
-    tl.fromTo('.square', { x: -500 }, { x: 0, duration: 2 }).fromTo(
-      '.square',
-      { backgroundColor: 'purple', scale: 0.8 },
-      { backgroundColor: 'orange', scale: 1.2 }
-    )
-  }, [])
 
   return (
     <section className="first-section container">
@@ -70,7 +49,6 @@ export const FirstSection = () => {
         />
       </div>
 
-      {/* <img className="blur-1" src="/src/assets/blur/blur-1.png" alt="blur" /> */}
     </section>
   )
 }

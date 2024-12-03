@@ -7,8 +7,8 @@ import { CasesPage } from './pages/CasesPage/CasesPage'
 import { MaterialsPage } from './pages/MaterialsPage/MaterialsPage'
 import { ScrollToTop } from './components/Service/ScrollToTop/ScrollToTop'
 import { useAnimTitles } from './components/Animation/useAnimTitles'
-import './App.scss'
 
+import './App.scss'
 
 function App() {
   useAnimTitles()
@@ -16,6 +16,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

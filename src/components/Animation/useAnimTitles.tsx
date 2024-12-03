@@ -1,9 +1,9 @@
-import { ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
-import { useLayoutEffect } from 'react'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/all'
 
 export const useAnimTitles = () => {
-  useLayoutEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger)
 
     const titles = document.querySelectorAll('h2')
@@ -17,7 +17,7 @@ export const useAnimTitles = () => {
           // markers: true,
           scrub: true,
         },
-      })
+      })  
 
       tl.fromTo(
         title,
@@ -25,9 +25,5 @@ export const useAnimTitles = () => {
         { opacity: 1, x: 0, rotation: 0, duration: 1.5, ease: 'power3.out' }
       )
     })
-
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
-  }, [])
+  }, {})
 }

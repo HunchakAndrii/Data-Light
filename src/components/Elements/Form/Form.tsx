@@ -14,9 +14,6 @@ export const Form = () => {
       projectInfo: '',
     },
   })
-  
-  console.log(errors)
-  
 
 return (
   <form

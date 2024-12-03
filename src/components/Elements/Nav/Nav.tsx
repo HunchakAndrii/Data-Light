@@ -6,6 +6,13 @@ interface NavProps {
   onLinkClick?: () => void
 }
 
+const navLionks = [
+  { href: '#cases', text: 'Наши решения' },
+  { href: '#benefits', text: 'Преимущества' },
+  { href: '#services', text: 'O компании' },
+  { href: '#contacts', text: 'Контакты' },
+]
+
 export const Nav = ({ type, onLinkClick }: NavProps) => {
   return (
     <nav
@@ -16,26 +23,13 @@ export const Nav = ({ type, onLinkClick }: NavProps) => {
       })}
     >
       <ul className="nav__list">
-        <li className="nav__item">
-          <a href="#cases" className="nav__link" onClick={onLinkClick}>
-            Наши решения
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#benefits" className="nav__link" onClick={onLinkClick}>
-            Преимущества
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#services" className="nav__link" onClick={onLinkClick}>
-            O компании
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#contacts" className="nav__link" onClick={onLinkClick}>
-            Контакты
-          </a>
-        </li>
+        {navLionks.map((link, index) => (
+          <li key={index} className="nav__item">
+            <a href={link.href} className="nav__link" onClick={onLinkClick}>
+              {link.text}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   )

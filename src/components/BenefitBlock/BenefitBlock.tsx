@@ -1,8 +1,9 @@
 import classNames from 'classnames'
-import { ScrollTrigger } from 'gsap/all'
-import gsap from 'gsap'
 import './BenefitBlock.scss'
-import { useLayoutEffect } from 'react'
+
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/all'
 
 type BenefitBlockProps = {
   block: {
@@ -14,33 +15,45 @@ type BenefitBlockProps = {
 }
 
 export const BenefitBlock: React.FC<BenefitBlockProps> = ({ block }) => {
-  const { title, text, type, icon} = block;
+  const { title, text, type, icon } = block
 
   gsap.registerPlugin(ScrollTrigger)
-  
-  useLayoutEffect(() => {
+
+  useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.benefit-block__icon',
-        start: 'top 70%',
-        end: 'bottom 30%',
+        trigger: '.benefit-block',
+        start: 'top 85%',
+        end: 'bottom 15%',
         // markers: true,
         scrub: true,
       },
     })
 
-    tl.fromTo('.benefit-block__icon', 
-      {
-        // x: 100,
-        opacity: 0,
-      },
-      {
-        // x: 0,
-        opacity: 1,
-        duration: 1.5,
-      }
+    tl.fromTo(
+      '.benefit-block',
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5, ease: 'power3.out' }
     )
-  }, [])
+
+    if (icon) {
+      const iconTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.benefit-block__icon',
+          start: 'top 75%',
+          end: 'bottom 25%',
+          markers: true,
+          scrub: true,
+        }
+      })
+          
+      iconTl.fromTo(
+        '.benefit-block__icon',
+        { opacity: 0,  },
+        { opacity: 1,  duration: 1.5, ease: 'power3.out', stagger: 0.4 }
+      )
+    }
+  }, {})
 
   return (
     <div
