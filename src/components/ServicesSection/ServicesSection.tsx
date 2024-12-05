@@ -4,8 +4,26 @@ import { serviceCardsDate } from '../../data/serviceCardsData'
 import { Button } from '../Elements/Button/Button'
 import { Link } from 'react-router-dom'
 
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/all'
+
 export const ServicesSection = () => {
-  
+  gsap.registerPlugin(ScrollTrigger)
+
+  useGSAP(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.services__text',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: true,
+      },
+    })
+
+    tl.from('.services__text', { opacity: 0, x: 100, rotation: 10 })
+  }, {})
+
   return (
     <section className="services" id="services">
       <div className="container">

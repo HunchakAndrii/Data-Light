@@ -42,15 +42,15 @@ export const BenefitBlock: React.FC<BenefitBlockProps> = ({ block }) => {
           trigger: '.benefit-block__icon',
           start: 'top 75%',
           end: 'bottom 25%',
-          markers: true,
+          // markers: true,
           scrub: true,
-        }
+        },
       })
-          
+
       iconTl.fromTo(
         '.benefit-block__icon',
-        { opacity: 0,  },
-        { opacity: 1,  duration: 1.5, ease: 'power3.out', stagger: 0.4 }
+        { opacity: 0 },
+        { opacity: 1, duration: 1.5, ease: 'power3.out', stagger: 0.3 }
       )
     }
   }, {})

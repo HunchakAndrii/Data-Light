@@ -6,12 +6,12 @@ import './Cases.scss'
 
 export const Cases = () => {
   return (
-    <section className="cases" id='cases'>
+    <section className="cases" id="cases">
       <div className="container">
         <h2 className="cases__title">Наши кейсы</h2>
         <div className="cases__cards">
           {casesCardsData.map((card, index) => (
-            <CasesCard key={index} card={card} />
+            <CasesCard key={index} card={card} index={index} />
           ))}
         </div>
         <Link to="/cases">
@@ -19,7 +19,7 @@ export const Cases = () => {
             btnText="Смотреть все кейсы"
             type="secondary"
             className="btn cases__btn"
-            />
+          />
         </Link>
       </div>
     </section>

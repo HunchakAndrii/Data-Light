@@ -3,9 +3,9 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
 
 export const useAnimTitles = () => {
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger)
 
+  useGSAP(() => {
     const titles = document.querySelectorAll('h2')
 
     titles.forEach(title => {

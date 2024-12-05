@@ -1,6 +1,10 @@
 import classNames from 'classnames'
 import './ServiceCard.scss'
 
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+import { useGSAP } from '@gsap/react'
+
 interface ServiceCardProps {
   card: {
     title: string
@@ -13,6 +17,33 @@ interface ServiceCardProps {
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
   const { title, text, img, extraText, type } = card;
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.service-card',
+        start: 'top 70%',
+        end: 'bottom 20%',
+        // markers: true,
+        scrub: true,
+      },
+    })
+
+    tl.fromTo(
+      '.service-card',
+      { opacity: 0, perspective: 20 },
+      {
+        opacity: 1,
+        perspective: 0,
+        duration: 3,
+        ease: 'power3.out',
+        stagger: 0.6
+      }
+    )
+
+  }, {})
 
   return (
     <section
