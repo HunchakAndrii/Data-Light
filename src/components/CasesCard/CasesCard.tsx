@@ -25,7 +25,7 @@ export const CasesCard: React.FC<CasesCardProps> = ({ card, index }) => {
         trigger: `.cases-card`,
         start: 'top 75%',
         end: 'bottom 20%',
-        markers: true,
+        // markers: true,
         scrub: true,
       },
     })

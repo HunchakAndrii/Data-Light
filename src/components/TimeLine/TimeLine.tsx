@@ -1,6 +1,25 @@
 import './TimeLine.scss'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/all'
 
 export const TimeLine = () => {
+  gsap.registerPlugin(ScrollTrigger)
+
+  useGSAP(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: `.timeline`,
+        start: 'top 50%',
+        end: 'bottom 10%',
+        markers: true,
+        scrub: true,
+      },
+    })
+
+
+  }, {})
+
   return (
     <div className="timeline">
       <div className="timeline__container">
@@ -93,7 +112,7 @@ export const TimeLine = () => {
           <img src="/images/timeline/Union.svg" alt="timeline__img" />
         </div>
       </div>
+
     </div>
   )
 }
-
