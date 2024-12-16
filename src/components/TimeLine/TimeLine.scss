@@ -1,6 +1,7 @@
 .timeline {
   padding-top: 268px;
   padding-bottom: 172px;
+  overflow: hidden;
 
   @include onDesktop {
     padding-top: 218px;
@@ -53,7 +54,6 @@
       transform: rotate(180deg);
       transition: transform 0.3s ease;
     }
-
   }
 
   @media screen and (max-width: 440px) {
@@ -411,8 +411,8 @@
     top: 0;
     left: 0;
     background-color: $bg;
+    transform: var(--before-transform, translateX(0));
     z-index: 1;
+    filter: blur(3px);
   }
-
 }
-

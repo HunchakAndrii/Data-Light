@@ -10,14 +10,20 @@ export const TimeLine = () => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: `.timeline`,
-        start: 'top 50%',
-        end: 'bottom 10%',
-        markers: true,
+        start: 'top top', // Начало анимации при достижении верхней части экрана
+        end: '+=500', // Длина анимации
         scrub: true,
+        pin: '.timeline', // Фиксация .timeline на месте
+        pinSpacing: false, // Убирает дополнительное пространство при фиксации
+        markers: true,
       },
     })
 
-
+    tl.to('.timeline__line', {
+      '--before-transform': 'translateX(100%)',
+      duration: 1,
+      ease: 'power1.out',
+    })
   }, {})
 
   return (
@@ -112,7 +118,6 @@ export const TimeLine = () => {
           <img src="/images/timeline/Union.svg" alt="timeline__img" />
         </div>
       </div>
-
     </div>
   )
 }
