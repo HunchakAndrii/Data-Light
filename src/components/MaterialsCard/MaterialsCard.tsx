@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Button } from '../Elements/Button/Button'
 import { CardsData } from '../Elements/CardsData/CardsData'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './MaterialsCard.scss'
 
 interface MaterialsCardProps {
@@ -24,6 +27,9 @@ const formattedDate = today.toLocaleDateString('ru-RU', {
   year: 'numeric',
 })
 
+gsap.registerPlugin(ScrollTrigger)
+
+
 export const MaterialsCard: React.FC<MaterialsCardProps> = ({ card }) => {
   const [viewCount, setViewCount] = useState(0)
   const [likeCount, setLikeCount] = useState(0)
@@ -35,10 +41,36 @@ export const MaterialsCard: React.FC<MaterialsCardProps> = ({ card }) => {
     setLikeCount(getRandom(1, 150))
   }, [])
 
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.materials-card',
+        start: 'top 90%',
+        end: 'bottom 80%',
+        scrub: true,
+        // markers: true,
+      },
+    })
+
+      tl.fromTo(
+        '.materials-card',
+        { perspective: 20, opacity: 0, y: 100 },
+        {
+          perspective: 0,
+          opacity: 1,
+          y: 0,
+          duration: 2,
+          ease: 'power1.out',
+          stagger: 0.6,
+        }
+      )
+  
+  }, {})
+
   return (
     <div className="materials-card">
       <div className="materials-card__image">
-        <img className='materials-card__img' src={img} alt="" />
+        <img className="materials-card__img" src={img} alt="" />
       </div>
 
       <div className="materials-card__content">

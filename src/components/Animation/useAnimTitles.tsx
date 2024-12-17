@@ -9,6 +9,10 @@ export const useAnimTitles = () => {
     const titles = document.querySelectorAll('h2')
 
     titles.forEach(title => {
+      if (title.classList.contains('not-anim')) {
+        return;
+      }
+
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: title,

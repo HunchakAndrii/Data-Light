@@ -16,43 +16,36 @@ type BenefitBlockProps = {
 
 export const BenefitBlock: React.FC<BenefitBlockProps> = ({ block }) => {
   const { title, text, type, icon } = block
-
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.benefit-block',
-        start: 'top 85%',
-        end: 'bottom 15%',
-        // markers: true,
-        scrub: true,
-      },
-    })
-
-    tl.fromTo(
-      '.benefit-block',
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5, ease: 'power3.out' }
+    const blocks = Array.from(document.querySelectorAll('.benefit-block')).map(
+      block => ({
+        element: block,
+        randomY: gsap.utils.random(50, 250, true),
+        randomDuration: gsap.utils.random(1, 2.5, true),
+      })
     )
 
-    if (icon) {
-      const iconTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.benefit-block__icon',
-          start: 'top 75%',
-          end: 'bottom 25%',
-          // markers: true,
-          scrub: true,
-        },
-      })
-
-      iconTl.fromTo(
-        '.benefit-block__icon',
-        { opacity: 0 },
-        { opacity: 1, duration: 1.5, ease: 'power3.out', stagger: 0.3 }
+    blocks.forEach(({ element, randomY, randomDuration }) => {
+      gsap.fromTo(
+        element,
+        { y: randomY, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: randomDuration,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 90%',
+            end: '+=400',
+            // markers: true,
+            scrub: true,
+          },
+        }
       )
-    }
+    })
   }, {})
 
   return (

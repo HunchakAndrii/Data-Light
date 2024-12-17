@@ -15,10 +15,10 @@ interface ServiceCardProps {
   }
 }
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
-  const { title, text, img, extraText, type } = card;
+gsap.registerPlugin(ScrollTrigger)
 
-  gsap.registerPlugin(ScrollTrigger)
+export const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
+  const { title, text, img, extraText, type } = card
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -39,10 +39,9 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
         perspective: 0,
         duration: 3,
         ease: 'power3.out',
-        stagger: 0.6
+        stagger: 0.6,
       }
     )
-
   }, {})
 
   return (

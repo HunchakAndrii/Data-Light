@@ -7,23 +7,98 @@ export const TimeLine = () => {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: `.timeline`,
-        start: 'top top', // Начало анимации при достижении верхней части экрана
-        end: '+=500', // Длина анимации
-        scrub: true,
-        pin: '.timeline', // Фиксация .timeline на месте
-        pinSpacing: false, // Убирает дополнительное пространство при фиксации
-        markers: true,
-      },
-    })
+    const isMobile = window.innerWidth <= 576
+    const isTablet = window.innerWidth > 576 && window.innerWidth <= 992
+    const isDesktop = window.innerWidth > 992
 
-    tl.to('.timeline__line', {
-      '--before-transform': 'translateX(100%)',
-      duration: 1,
-      ease: 'power1.out',
-    })
+    if (isDesktop) {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: `.works__title`,
+          start: 'top 10%',
+          end: '+=2000',
+          scrub: true,
+          pin: '.timeline',
+          // markers: true,
+        },
+      })
+
+      tl.to('.timeline__line', {
+        '--before-transform': 'translateX(100%)',
+        '--blur': '6px',
+        duration: 5,
+        ease: 'power1.out',
+      })
+
+      document.querySelectorAll('.timeline__item').forEach((item, index) => {
+        const animDirection = index % 2 === 0 ? 100 : -100
+
+        tl.fromTo(
+          item,
+          { opacity: 0, y: animDirection },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.6,
+            ease: 'power3.in',
+          }
+        )
+      })
+    } else if (isTablet) {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: `.works__title`,
+          start: 'top 10%',
+          end: 'bottom 90%',
+          scrub: true,
+          pin: '.timeline',
+          // markers: true,
+        },
+      })
+
+      document.querySelectorAll('.timeline__item').forEach((item, index) => {
+        const animDirection = index % 2 === 0 ? 100 : -100
+
+        tl.fromTo(
+          item,
+          { opacity: 0, x: animDirection },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: 'power3.in',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 100%',
+              end: 'bottom 80%',
+              scrub: true,
+              // markers: true,
+            },
+          }
+        )
+      })
+    } else if (isMobile) {
+      document.querySelectorAll('.timeline__item').forEach(item => {
+        gsap.fromTo(
+          item,
+          { opacity: 0, x: 200 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: 'power3.in',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 100%',
+              end: 'bottom 80%',
+              scrub: true,
+              // markers: true,
+            },
+          }
+        )
+      })
+
+    }
   }, {})
 
   return (

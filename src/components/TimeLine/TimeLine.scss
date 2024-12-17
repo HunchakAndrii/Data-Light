@@ -1,7 +1,8 @@
 .timeline {
-  padding-top: 268px;
+  // padding-top: 268px;
+  padding-top: 200px;
   padding-bottom: 172px;
-  overflow: hidden;
+  overflow: visible;
 
   @include onDesktop {
     padding-top: 218px;
@@ -382,25 +383,7 @@
 
 .timeline__line {
   position: absolute;
-
-  @include onTablet {
-    border-radius: 30px;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(to top, #4aff00, #e3fb1e);
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  @include onTabletSmall {
-    left: 47px;
-  }
-
-  @media screen and (max-width: 440px) {
-    left: 42px;
-  }
+  padding-block: 15px;
 
   &::before {
     content: '';
@@ -413,6 +396,32 @@
     background-color: $bg;
     transform: var(--before-transform, translateX(0));
     z-index: 1;
-    filter: blur(3px);
+    filter: blur(var(--blur, 0px));
   }
+
+  @include onTablet {
+    border-radius: 30px;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, #4aff00, #e3fb1e);
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include onTabletSmall {
+    left: 47px;
+  }
+
+  @media screen and (max-width: 440px) {
+    left: 42px;
+  }
+
+
+
 }

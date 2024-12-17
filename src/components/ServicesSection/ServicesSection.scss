@@ -1,5 +1,6 @@
 .services {
   padding: 105px 0 75px;
+  overflow: hidden;
 
   @include onMobile {
     padding: 70px 0 40px;
